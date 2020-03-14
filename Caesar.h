@@ -1,5 +1,5 @@
-#ifndef PLAYFAIR_H
-#define PLAYFAIR_H
+#ifndef CAESAR_H
+#define CAESAR_H
 
 #include <vector>   /* For vectors */
 #include <string>   /* For C++ strings */
@@ -10,12 +10,10 @@
 using namespace std;
 
 /**
- * This class implements the playfair cipher.
- * The class extends the abstract class
- * CipherInterface.
+ * This class implements the interface for a typical cipher.
+ * It defines functions usually used in a cipher
  */
-
-class Playfair: public CipherInterface
+class Caesar: public CipherInterface
 {
 	/** The public members **/
 	public:
@@ -41,11 +39,9 @@ class Playfair: public CipherInterface
 		 */
 		virtual string decrypt(const string& ciphertext);
 
-
 		/* The protected members */
 	protected:
-	string _key;
-
+	   string _key;
 };
 
 #endif
