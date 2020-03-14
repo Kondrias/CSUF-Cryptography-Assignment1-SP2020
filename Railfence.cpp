@@ -1,5 +1,5 @@
 #include <string>
-#include<iostream>
+#include <iostream>
 #include "Railfence.h"
 
 bool Railfence::setKey(const string& key) {
