@@ -5,6 +5,7 @@
 #include <fstream>
 #include "RowTransposition.h"
 #include "Caesar.h"
+#include "Railfence.h"
 //add .h file for the other programs
 
 using namespace std;
