@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include "RowTransposition.h"
+#include "Caesar.h"
 #include "Railfence.h"
 //add .h file for the other programs
 
@@ -35,28 +36,28 @@ int main(int argc, char** argv)
 
 	outfile.open(output);
 
-	/* Create an instance of the Playfair cipher */	
+	/* Create an instance of the Playfair cipher */
 	CipherInterface* cipher = NULL;
 
 	if (cipherName == "PLF")
-		cipher = new Playfair(); 
+		cipher = new Playfair();
 	else if (cipherName == "RTS")
-		cipher = new RowTransposition(); 
+		cipher = new RowTransposition();
 	else if (cipherName == "RFC")
-		cipher = new Railfence(); 
+		cipher = new Railfence();
 	else if (cipherName == "VIG")
-		cipher = new Vigenere(); 
+		cipher = new Vigenere();
 	else if (cipherName == "CES")
-		cipher = new Caesar(); 
+		cipher = new Caesar();
 	else
 	{
-		cout << "ERROR"
+		cout << "ERROR";
 	}
-	
+
 	/* Error checks */
 	if(!cipher)
 	{
-		fprintf(stderr, "ERROR [%s %s %d]: could not allocate memory\n",	
+		fprintf(stderr, "ERROR [%s %s %d]: could not allocate memory\n",
 		__FILE__, __FUNCTION__, __LINE__);
 		exit(-1);
 	}
