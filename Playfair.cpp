@@ -13,16 +13,19 @@ bool Playfair::setKey(const string& key) // also creates the matrix used
 {
 	_key = key;
 	string Keymatrix[5][5];
-	string alphabet = "abcdefghijklmnopqrstuvwxyz";
+	string alphabet = "abcdefghiklmnopqrstuvwxyz";
 	for (int i=0; i< _key.length(); i++){
 		for(int j=0; i< alphabet.length(); j++){
+			if(_key[i] == "j"){
+				_key[i] == "i";
+			}
 			if(_key[i] == alphabet[j]){
 				alphabet.erase(j,1);
 			}
 		}
 	}
-	
-	return false;
+	_key.append(alphabet)
+	return true;
 }
 
 
